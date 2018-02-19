@@ -1,0 +1,8 @@
+.footer-container {
+  bottom: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1em;
+  border-top: solid 2px;
+}

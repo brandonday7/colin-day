@@ -1,0 +1,14 @@
+.banner {
+  position: fixed;
+  width: 100vw;
+  height: 6em;
+  background-color: black;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1em;
+}
+
+.nav-text {
+  color: white;
+}
