@@ -1,8 +1,19 @@
 .footer-container {
+  position:fixed;
   bottom: 0;
+  width: 100%;
   display: flex;
-  justify-content: left;
   align-items: center;
   padding-left: 1em;
-  border-top: solid 2px;
+  background-color: #A5C7E2;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  /*justify-content: space-between;*/
+}
+
+a {
+  text-decoration: none;
 }

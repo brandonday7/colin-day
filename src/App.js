@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import NavBar from "./Components/Layout/NavBar"
 import Footer from "./Components/Layout/Footer"
-import Container from "./Components/Layout/Container"
+import Body from "./Components/Layout/Body"
+import "./App.css"
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="site-container">
         <NavBar />
-        <Container />
+        <Body />
         <Footer />
       </div>
     );
