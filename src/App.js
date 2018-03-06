@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from "./Components/Layout/NavBar"
 import Footer from "./Components/Layout/Footer"
-import Body from "./Components/Layout/Body"
+import Home from "./Components/Layout/Home"
 import "./App.css"
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="site-container">
         <NavBar />
-        <Body />
+        <Home />
         <Footer />
       </div>
     );
