@@ -61,3 +61,7 @@
 .links:hover {
 	color: rgb(68, 217, 230);
 }
+
+.selected-link{
+	color: rgb(68, 217, 230);
+}

@@ -8,9 +8,9 @@ import Services from "../components/Services/Services";
 import About from "../components/Static/About"
 import NotFound from "../components/Static/NotFound"
 
-const Root = ({ }) => (
+const Root = ({ history }) => (
   <BrowserRouter>
-    <Layout>
+    <Layout history={history}>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
