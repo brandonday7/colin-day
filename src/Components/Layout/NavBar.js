@@ -6,7 +6,7 @@ const Navbar = () => (
   <div className="banner">
   	<div className="logo">
   		<div className="logo-image">
-  			<img src={tooth} height="50"/>
+  			<img src={tooth} alt="tooth" height="50"/>
   		</div>
 	  	<div className="logo-text">
 	    	<h1 className="heading title">DR. COLIN DAY</h1>
