@@ -3,18 +3,22 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Layout from '../components/Layout';
 
 import Home from "../components/Layout/Home";
-import Brandon from "../components/Layout/Brandon";
+import Contact from "../components/Contact/Contact";
+import Services from "../components/Services/Services";
+import About from "../components/Static/About"
 import NotFound from "../components/Static/NotFound"
 
 const Root = () => (
   <BrowserRouter>
-    <Switch>
-      <Layout>
-        <Route path="/" component={Home} />
-        <Route path="/brandon" component={Brandon} />
-        <Route path="/*" component={NotFound} />
-      </Layout>
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/services" exact component={Services} />
+        <Route path="/contact" exact component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   </BrowserRouter>
 );
 

@@ -1,9 +1,11 @@
 import React from "react"
 import "./NavBar.css"
+import { Link } from "react-router-dom";
 import tooth from "../../images/tooth.png"
 
 const Navbar = () => (
   <div className="banner">
+  	<Link to="/">
   	<div className="logo">
   		<div className="logo-image">
   			<img src={tooth} alt="tooth" height="50"/>
@@ -13,11 +15,13 @@ const Navbar = () => (
 	    	<h2 className="heading subtitle">FAMILY DENTISTRY</h2>
 	  	</div>
   	</div>
+  	</Link>
 
   	<div className="links-list">
-  		<p className="links">ABOUT US</p>
-  		<p className="links">SERVICES</p>
-  		<p className="links">CONTACT</p>
+  		<Link to="/about"><p className="links">ABOUT US</p></Link>
+  		<Link to="/"><p className="links">RESOURCES</p></Link>
+  		<Link to="/services"><p className="links">SERVICES</p></Link>
+  		<Link to="/contact"><p className="links">CONTACT</p></Link>
   	</div>
   	
   </div>
