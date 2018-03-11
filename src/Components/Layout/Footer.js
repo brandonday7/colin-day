@@ -4,7 +4,6 @@ import "./Footer.css"
 const Footer = () => (
   <div className="footer-container">
     <div className="content">
-      <h2 className="colin-logo">Dr. Colin Day</h2>
       <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/Dr-Colin-M-Day-1719993701611754/?rf=268922870108828">
       	<i className="fa fa-facebook-square facebook-logo" />
       </a>

@@ -2,13 +2,41 @@
   position: fixed;
   width: 100vw;
   height: 6em;
-  background-color: #103655;
+  background-color: rgb(0, 135, 220);
   display: flex;
   justify-content: left;
   align-items: center;
   padding-left: 1em;
 }
 
-.nav-text {
-  color: white;
+.logo {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.logo-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	margin: 0;
+}
+
+.title {
+	color: white;
+}
+
+.subtitle {
+	color: rgb(68, 217, 230);
+}
+
+.sub {
+	color: rgb(68, 217, 230);
+}
+
+.logo-image {
+	-webkit-filter: invert(1);
+   filter: invert(1);
 }
