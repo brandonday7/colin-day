@@ -1,6 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
-import Route from "./ScrollToTopRoute";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Layout from '../components/Layout';
 
 import Home from "../components/Layout/Home";
@@ -9,13 +8,13 @@ import NotFound from "../components/Static/NotFound"
 
 const Root = () => (
   <BrowserRouter>
-    <Layout>
-      <Switch>
+    <Switch>
+      <Layout>
         <Route path="/" component={Home} />
-        <Route path="/*" component={NotFound} />
         <Route path="/brandon" component={Brandon} />
-      </Switch>
-    </Layout>
+        <Route path="/*" component={NotFound} />
+      </Layout>
+    </Switch>
   </BrowserRouter>
 );
 

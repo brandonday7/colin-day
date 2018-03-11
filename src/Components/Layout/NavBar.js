@@ -13,6 +13,13 @@ const Navbar = () => (
 	    	<h2 className="heading subtitle">FAMILY DENTISTRY</h2>
 	  	</div>
   	</div>
+
+  	<div className="links-list">
+  		<p className="links">ABOUT US</p>
+  		<p className="links">SERVICES</p>
+  		<p className="links">CONTACT</p>
+  	</div>
+  	
   </div>
 )
 
