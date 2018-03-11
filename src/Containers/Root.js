@@ -8,7 +8,7 @@ import Services from "../components/Services/Services";
 import About from "../components/Static/About"
 import NotFound from "../components/Static/NotFound"
 
-const Root = () => (
+const Root = ({ }) => (
   <BrowserRouter>
     <Layout>
       <Switch>

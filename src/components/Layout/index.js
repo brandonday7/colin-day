@@ -5,8 +5,7 @@ import "./Layout.css"
 
 const Layout = ({ children }) => (
 	<div className="site-container">
-	{console.log(children)}
-		<NavBar />
+		<NavBar/>
 		<div>
 		  {children}
 		</div>
