@@ -13,3 +13,4 @@ const Footer = () => (
 
 export default Footer
 
+// include phone number, email, google maps link, join our newsletter
