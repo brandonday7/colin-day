@@ -10,8 +10,8 @@
 }
 
 .service-div {
-	max-height: 200px;
-	max-width: 200px;
+	height: 250px;
+	width: 250px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

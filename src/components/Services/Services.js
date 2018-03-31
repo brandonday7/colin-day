@@ -1,78 +1,43 @@
-import React from "react"
-import Paper from 'material-ui/Paper';
-import tooth1 from "../../images/tooth1.jpg"
-import tooth2 from "../../images/tooth2.jpg"
+import React, { Component } from "react"
+import Service from "./Service"
 import "./services.css"
 
 
-const Services = () => (
-  <div className="container">
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em", margin: "0 1em 1em 1em"}} zDepth={1}>
-    	<p>This is one of our services</p>
-    	<img src={tooth1} className="service-image"/>
-    </Paper>
-    <Paper className="service-div" style={{padding: "1em"}} zDepth={1}>
-    	<p>This is a totally different service</p>
-    	<img src={tooth2} className="service-image"/>
-    </Paper>
-  </div>
-)
+class Services extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			services: []
+		}
+	}
+
+	retrieveServices() {
+		const headers = {
+			"Content-Type": "application/json"
+		}
+
+		fetch("http://localhost:3001/services", headers)
+		.then(res => res.json())
+		.then(res => this.setState({ services: res }))
+	}
+
+	componentDidMount() {
+		this.retrieveServices()
+	}
+
+	render() {
+		const { services = [] } = this.state
+		return (
+	  		<div className="container">
+	  		{
+	  			services.map((service) => (
+	  				<Service individualService={service} />
+	  			))
+	  		}
+	  		</div>		
+		)
+	}
+}
 
 export default Services
 

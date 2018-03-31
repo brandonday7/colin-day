@@ -2,7 +2,8 @@ class ServicesController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 	def index
-		
+		response = Service.all.map {|s| {title: s.title, description: s.description}}
+		render json: response, status: 200
 	end
 
 	def create
