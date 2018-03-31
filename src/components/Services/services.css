@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	justify-content: center;	
+	flex-wrap: wrap;
+}
+
+.service-image {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.service-div {
+	max-height: 200px;
+	max-width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
