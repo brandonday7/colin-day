@@ -13,12 +13,11 @@ class Navbar extends Component {
 		}
 	}
 	componentWillReceiveProps(nextProps) {
-		// console.log(nextProps.history.location)
-		// const nextLocation = nextProps.history.location.pathname
-		// if (nextLocation !== this.state.location) {
-		// 	this.setState({ location: nextLocation })
-		// }
-		console.log(nextProps)
+		console.log(nextProps.history.location)
+		const nextLocation = nextProps.history.location.pathname
+		if (nextLocation !== this.state.location) {
+			this.setState({ location: nextLocation })
+		}
 	}
 	render() {
 		return (

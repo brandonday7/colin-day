@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Layout from '../components/Layout';
-// import { withRouter } from 'react-router'
+import Layout from './Layout';
 
 import Home from "../components/Layout/Home";
 import Contact from "../components/Contact/Contact";
@@ -9,9 +8,9 @@ import Services from "../components/Services/Services";
 import About from "../components/Static/About"
 import NotFound from "../components/Static/NotFound"
 
-const Root = ({ }) => (
+const Root = () => (
   <BrowserRouter>
-    <Layout >
+    <Layout>
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/about" exact component={About} />
