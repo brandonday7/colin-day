@@ -1,13 +1,13 @@
 import React from 'react';
 import NavBar from "./NavBar"
 import Footer from "./Footer"
-import { withRouter } from 'react-router-dom';
+// import { withRouter } from 'react-router-dom';
 
 import "./Layout.css"
 
-const Layout = ({ children, history }) => (
+const Layout = ({ children }) => (
 	<div className="site-container">
-		<NavBar history={history} />
+		<NavBar />
 		<div>
 		  {children}
 		</div>

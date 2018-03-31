@@ -4,7 +4,7 @@ import './index.css';
 import Root from "./containers/Root"
 import registerServiceWorker from './registerServiceWorker';
 import 'font-awesome/css/font-awesome.min.css';
-import history from './history'
+// import history from './history'
 
-ReactDOM.render(<Root history={history} />, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();
